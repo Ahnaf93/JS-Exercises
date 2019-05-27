@@ -21,11 +21,11 @@ console.log(sum([1,2,3,6]))
 
 function validateEmail(email){
 
-   return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
-
-}
-
-
-var checkEmail=validateEmail('aafsj')
-console.log(checkEmail)
-console.log(validateEmail('anf@gmail.com'))
+    return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+ 
+ }
+ 
+ 
+ var checkEmail=validateEmail('aafsj')
+ console.log(checkEmail)
+ console.log(validateEmail('anf@gmail.com'))
