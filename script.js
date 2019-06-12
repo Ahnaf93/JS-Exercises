@@ -90,3 +90,72 @@ function validateEmail(email){
 
           console.log(getreadingStatus(2, 'author'))
      
+
+          //Task- 5//
+
+          var cart = [ 
+            {
+                name: 'Shoes',
+                price: 560,
+                quantity: 4
+            },
+            {
+                name: 'Regular Tees',
+                price: 455.50,
+                quantity: 6
+            },
+            {
+                name: 'Socks',
+                price: 65.99,
+                quantity: 2
+            }];
+
+            //5a- add a new items//
+
+            function addItems(newItem){
+               cart.push (newItem);
+            }
+
+            addItems({name: 'Book', price: '20', quantity: '1'})
+
+            console.log(cart)
+
+
+
+
+            //5b// sort by given property
+
+           
+                 function sortCart(prop){
+                     cart.sort(function(a,b){
+                         if ( a[prop] < b[prop] ){
+                         return -1;
+                            }
+                        if ( a[prop] > b[prop]){
+                        return 1;
+                         }
+                        return 0;
+        }) 
+    }
+        sortCart('name')
+        console.log(cart)
+
+           
+
+            //5c
+            function findByName(name){
+                return name.name==='Socks';
+            }
+            console.log(cart.find(findByName));
+
+
+            //5d//
+            function getTotalCost(){
+                var totalCost = 0;
+                for (var i in cart){
+                    totalCost += cart[i].price;
+                }
+                return totalCost;
+             }
+             console.log('Total Price ='+ getTotalCost());
+            
